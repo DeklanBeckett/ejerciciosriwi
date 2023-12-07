@@ -1,0 +1,78 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+  
+
+  @import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital@1&display=swap');
+  
+  
+  @import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;400&display=swap');
+
+
+
+
+
+
+
+body{ 
+    margin: 0%;
+    padding: 0%;
+    background-color: #abdcf5 ;
+}
+.portafolio{
+    background-color: aqua;
+    text-align: center;
+    height: 130px;
+   
+    background-image: url('https://wallpapercave.com/wp/wp7471860.jpg');
+    background-size: cover;
+    
+     
+}
+
+.portafolio h1{
+    background-color: rgba(0, 0, 0, 0.644);
+    color: #8E44AD;
+    font-family: 'Righteous', sans-serif;
+    font-size: 40px;
+
+    
+}
+.card {
+    text-align: center;
+    border-radius: 20px;
+    background-color: #6274db;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+p{
+    
+    font-family: 'Noticia Text', serif;
+    font-size: 3;
+}
+button {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 20px;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #8E44AD;
+    color: white;
+    border: 1px solid black;
+}
+
+footer{
+    height: 200px;
+    background-color: black;
+    margin-top: 50px;
+}
