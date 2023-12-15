@@ -1,0 +1,27 @@
+if (formNombre != "") {
+            document.getElementById('nombres').classList.add('is-valid');
+            document.getElementById('nombres').classList.remove('is-invalid');
+
+        } else {
+            document.getElementById('nombres').classList.add('is-invalid');
+            document.getElementById('nombres').classList.remove('is-valid');
+            document.getElementById('elementos').innerHTML = "Faltan elementos";
+        }
+        if (formApellido !== "") {
+            document.getElementById('apellidos').classList.add('is-valid');
+            document.getElementById('apellidos').classList.remove('is-invalid');
+            
+        } else {
+            document.getElementById('apellidos').classList.add('is-invalid');
+            document.getElementById('apellidos').classList.remove('is-valid');
+            document.getElementById('elementos').innerHTML = "Faltan elementos";
+        }
+        if (formCorreo !== "") {
+            document.getElementById('correo').classList.add('is-valid');
+            document.getElementById('correo').classList.remove('is-invalid');
+            
+        } else {
+            document.getElementById('correo').classList.add('is-invalid');
+            document.getElementById('correo').classList.remove('is-valid');
+            document.getElementById('elementos').innerHTML = "Faltan elementos";
+        }
