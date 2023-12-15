@@ -1,0 +1,57 @@
+body{
+    background-image:  url('https://wallpapers.com/images/hd/purple-gaming-tdo2g9yod9gugj81.jpg');
+    
+   
+}
+h1{
+    text-align: center;
+    font-size: 80px;
+    color: white;
+}
+input{
+    width: 200px;
+    height: 30px;
+    margin-top: 20px;
+    
+}
+div{
+
+
+text-align: center;
+
+}
+
+label{
+        color: black;
+        font-size: 30px;
+        
+}
+button{
+    width: 100px;
+    height: 30px;
+    background-color: white ; 
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+}
+button:hover{
+    background-color: rgb(149, 50, 149);
+    color: white;
+    border: 1px solid white;
+}
+.letra2{
+    color: white;
+    margin-top: 190px;
+    font-size: 50px;
+}
+img{
+    width: 300px;
+    height: 400px;
+    margin-top: 50px;
+}
+.posicion{
+    margin-top: -300px;
+    color: black;
+    margin-right: 230px;
+    font-size: 40px;
+}
