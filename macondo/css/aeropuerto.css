@@ -1,0 +1,37 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+
+.div1{
+    background-image: url('https://img.freepik.com/fotos-premium/habitacion-dibujos-animados-cama-estante-libreria-encima_873391-317.jpg');
+    color: white;
+    width: 1800px;
+    height: 900px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center
+    
+    
+}
+.div1 p{
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.aeropuerto{
+    background-image: url('https://images.vexels.com/content/149261/preview/flat-airport-facility-illustration-4d9e8d.png');
+    color:black;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.div2{
+    
+    color: white;
+    width: 900px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+button{
+    margin-top: 500px;
+}

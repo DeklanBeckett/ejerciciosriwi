@@ -1,0 +1,52 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/021/855/948/non_2x/restaurant-interior-cartoon-vector.jpg');
+    background-size: cover;
+}
+
+img{
+    margin-top: 200px;
+    width: 500px;
+}
+div{
+    display: grid;
+    grid-template-columns: 33% 33% 33%; 
+}
+
+select{
+    height: 50px;
+    width: 400px;
+    background-color: white;
+    color: black;
+    margin-top: 300px;
+    font-size: 20px; 
+
+
+}
+
+button{
+    height: 50px;
+    width: 400px;
+    background-color: bisque;
+    color: black;
+    margin-top: 300px;
+    font-size: 20px; 
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+}
+.gorila{
+    display: inline;
+    color: white;;
+    font-size: 50px;
+    
+}
+
+
+
+
+

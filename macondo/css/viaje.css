@@ -1,0 +1,35 @@
+body{
+    background-image: url('https://cdna.artstation.com/p/assets/images/images/052/173/134/large/jeremy-lopez-encanto-4k-published.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    text-align: center;
+    color: white;
+    font-size: 200px;
+    margin-top: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    
+       
+      
+}
+div{
+    margin-left: 730px;
+}
+
+div button{
+    width: 300px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    cursor: pointer;
+    
+}
+
+div button:hover{
+    background-color: black;
+    color: white;
+    animation: 2s;
+}
