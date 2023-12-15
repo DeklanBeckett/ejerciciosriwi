@@ -96,7 +96,7 @@ else if(language == "1"){
     document.getElementById('div5').innerHTML = `<div class="card-body" id="div5">
     <p>$ 21.900</p>
     <h4>COMBO KENTUCKY SANDWICH</h4>
-    <p1 Kentucky hamburguesa /Sandwich (1 Filete de pechuga de pollo apanado, pepinillos, mayonesa premium y mantequilla) + 1 Papa Pequeña + 1 Gaseosa PET 400ml
+    <p>1 Kentucky hamburguesa /Sandwich (1 Filete de pechuga de pollo apanado, pepinillos, mayonesa premium y mantequilla) + 1 Papa Pequeña + 1 Gaseosa PET 400ml
     </p>
     <button class="btn btn-danger w-100">Comprar</button>
     </div>`
