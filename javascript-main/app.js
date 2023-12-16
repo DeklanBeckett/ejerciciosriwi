@@ -23,6 +23,8 @@ var persons = [
        persons[posicion].nombre = nombre;
        persons[posicion].apellidos = apellido;
        persons[posicion].correo = correo;
+
+       
        
 
        
@@ -65,6 +67,20 @@ var persons = [
      else{
       alert('todos los elementos son necesarios');
      }
+     
+    }
+    function eliminar(posicion){
+        let nombre = document.getElementById('nombre_' + posicion).innerText = "";
+        let apellido = document.getElementById('apellido_' + posicion).innerHTML = "";
+        let correo = document.getElementById('correo_' + posicion).innerHTML = "";
+        
+        persons[posicion].nombre = nombre;
+        persons[posicion].apellidos = apellido;
+        persons[posicion].correo = correo;
+        document.getElementById('element_'+posicion).innerHTML = " "
+        
+        
     }
 
+ 
     console.log(persons);
