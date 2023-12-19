@@ -1,0 +1,25 @@
+body{
+    background-image: url('https://hips.hearstapps.com/hmg-prod/images/harry-potter-catedral-1512384798.jpg?crop=1.00xw:0.844xh;0,0&resize=1200:*');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0%;
+    padding: 0%;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.452);
+
+}
+p{
+    text-align: center;
+    color: white;
+}
+.video{
+    margin-left: 400px;
+}
+
+header{
+    background-color: rgba(0, 0, 0, 0.452);
+}
