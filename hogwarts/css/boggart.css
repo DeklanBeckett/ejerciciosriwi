@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Kalam:wght@300&display=swap');
 body{
     background-image: url('https://hips.hearstapps.com/hmg-prod/images/harry-potter-catedral-1512384798.jpg?crop=1.00xw:0.844xh;0,0&resize=1200:*');
     background-repeat: no-repeat;
@@ -17,9 +18,45 @@ p{
     color: white;
 }
 .video{
-    margin-left: 400px;
+    margin-left: 600px;
 }
 
 header{
     background-color: rgba(0, 0, 0, 0.452);
+}
+button{
+    margin-left: 250px;
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 30px; 
+    font-family: 'Beau Rivage', cursive;
+    margin-top: 10px;
+}
+button:hover{
+    font-family: 'Beau Rivage', cursive;
+    background-color: black;
+    color: white;
+}
+
+td p{
+    color: black;
+    font-size: 30px;
+   
+    font-family: 'Beau Rivage', cursive;
+
+}
+
+td{
+    background-color: rgba(255, 255, 255, 0.486);
+}
+table{
+    margin-left: 150px;
+    
+}
+table td{
+    border-radius: 20px;
 }
