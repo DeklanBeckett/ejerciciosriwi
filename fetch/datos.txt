@@ -1,0 +1,115 @@
+function valor(){
+    var valor =  document.getElementById('valor');
+    console.log(valor.value);
+    let filtro = persons.filter(function(usuario){
+    document.getElementById("row").innerHTML = "";
+    let nombrepersona = usuario.person.nombre.toLowerCase().includes(valor.value.toLowerCase());
+    let edadpersona = usuario.person.edad.toLowerCase()==valor.value.toLowerCase();
+    let generopersona = usuario.person.genero.toLowerCase().includes(valor.value.toLowerCase());
+    let generocinef = usuario.generoCine.generoFav.toLowerCase().includes(valor.value.toLowerCase());
+    let aliaspersona = usuario.person.alias.toLowerCase().includes(valor.value.toLocaleLowerCase());
+    let actor  = usuario.actoresFav.actor[0].nombre.toLowerCase().includes(valor.value.toLocaleLowerCase());
+    let actriz  = usuario.actoresFav.actriz[0].nombre.toLowerCase().includes(valor.value.toLocaleLowerCase());
+    let fechaspeliF  = usuario.actoresFav.actriz[0].peliculas[0].lanzamiento.toLowerCase()==valor.value.toLocaleLowerCase();
+    let fechaspeliM  = usuario.actoresFav.actor[0].peliculas[0].lanzamiento.toLowerCase()==valor.value.toLocaleLowerCase();
+    let fechaspeliF1  = usuario.actoresFav.actriz[0].peliculas[1].lanzamiento.toLowerCase()==valor.value.toLocaleLowerCase();
+    let fechaspeliM1  = usuario.actoresFav.actor[0].peliculas[1].lanzamiento.toLowerCase()==valor.value.toLocaleLowerCase();
+    let sobre  = usuario.peliculas.peliculaSobre.toLowerCase()==valor.value.toLocaleLowerCase();
+    let infra  = usuario.peliculas.peliculaInfra.toLowerCase()==valor.value.toLocaleLowerCase();
+    let pelif = usuario.peliculas.peliculaFav.toLowerCase().includes(valor.value.toLowerCase())
+    let pelim = usuario.peliculas.peorPeli.toLowerCase().includes(valor.value.toLowerCase());
+    
+
+    return nombrepersona || edadpersona || generopersona || generocinef || aliaspersona  || actor || actriz || fechaspeliF || fechaspeliM || sobre || infra  || fechaspeliF1 ||fechaspeliM1 || pelif || pelim;
+    })
+    console.log(filtro);
+
+// like SQL
+filtro.forEach(function(usuario){
+let row = document.getElementById('row');
+    let col = document.createElement('div');
+    col.setAttribute('class','col-md-3');
+    row.appendChild(col);
+
+    let card = document.createElement('div');
+    card.setAttribute('class','card','h-100','d-flex','flex-column');
+    col.appendChild(card);
+
+    let imagen = document.createElement('img');
+    imagen.setAttribute('src','https://www.elespectador.com/resizer/Lsjn4OGSC3sBGL_kZj1zpkC93a8=/920x613/filters:quality(60):format(jpeg)/cloudfront-us-east-1.images.arcpublishing.com/elespectador/R5KR3PICCFEVHMFIXPW2H2ETQ4.jpg');
+    imagen.setAttribute('class','img-fluid');
+    card.appendChild(imagen);
+
+    let bodyCard = document.createElement('div');
+    bodyCard.setAttribute('class','card-body');
+    card.appendChild(bodyCard);
+    let h1 = document.createElement('h1');
+    h1.innerText = usuario.person.nombre;
+    bodyCard.appendChild(h1);
+
+    let h3 = document.createElement('h3');
+    h3.innerText = `edad: ${usuario.person.edad}`; 
+    bodyCard.appendChild(h3);
+
+    let h4 = document.createElement('h3');
+    h4.innerText = `Genero: ${usuario.person.genero}`; 
+    bodyCard.appendChild(h4);       
+
+    let h5 = document.createElement('h3');  
+    h5.innerText = 'Genero cine:'; 
+    h5.setAttribute('class','h5');
+    bodyCard.appendChild(h5);   
+
+    
+
+    let ul1 = document.createElement('ul');
+    ul1.setAttribute('class','lista');
+    h5.appendChild(ul1);
+
+    let li1 = document.createElement('li');
+    li1.innerText = `Genero favorito: ${usuario.generoCine.generoFav}`
+    ul1.appendChild(li1);
+
+    let li2 = document.createElement('li');
+    li2.innerText = `Genero odiado: ${usuario.generoCine.generoOdio}`
+    ul1.appendChild(li2);
+
+    let h6 = document.createElement('h3')
+    h6.innerText = 'Peliculas:';
+    h6.setAttribute('class','h5');
+    let ul2 = document.createElement('ul');
+    ul1.setAttribute('class','lista');
+    h6.appendChild(ul2);
+    let li3 = document.createElement('li');
+    li3.innerText = `Pelicula favorita: ${usuario.peliculas.peliculaFav}`
+    ul2.appendChild(li3);
+    bodyCard.appendChild(h6);
+
+    let li4 = document.createElement('li');
+    li4.innerText = `Pelicula odiada: ${usuario.peliculas.peorPeli}`
+    ul2.appendChild(li4);
+    
+
+
+    let apodo = document.createElement('h3');
+    apodo.innerText = `Apodo : ${usuario.person.alias}`;
+    bodyCard.append(apodo);
+    
+
+    
+
+    if (usuario.person.genero == "Femenino"){
+        imagen.setAttribute('src','https://www.women.com/img/gallery/subtle-ways-to-take-on-the-barbie-obsession-this-summer-even-if-you-hate-pink/l-intro-1685468065.jpg')
+    }
+    else if  (usuario.person.genero == "Gato"){
+        imagen.setAttribute('src','https://www.eluniverso.com/resizer/igREpqTYQkM4xIgIdk4xKGzfVkY=/1072x670/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/BRRQTYEGYFBCZPTGSSIUNYVZJI.jpg')
+    }
+    else if  (usuario.person.genero == "Mapache"){
+        imagen.setAttribute('src','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCkjHKtHC9RFMc1UVGpFidPKNbhFUh3QjsVA&usqp=CAU')
+    }
+    else if  (usuario.person.genero == "Leon"){
+        imagen.setAttribute('src','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbHXTEIIqEO5rQ7L6F9040J_aWbY0G0p0Tjw&usqp=CAU')
+    }
+    })
+}
+
