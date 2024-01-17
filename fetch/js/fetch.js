@@ -8,12 +8,13 @@ fetch("https://memin.io/public/api/v2/users/search/"+valor.value, { method: "GET
         return response.json()
         
     }).then(data =>{
+        console.log(data);
         primero.innerHTML = ""
-/*       if(data.lenght !== 0 || isNaN(data) || !data ){
+        /*  if(data.lenght !== 0 || isNaN(data) || !data ){
         let h1 =  document.createElement('h1');
         h1.innerText = "no hay nada";
         primero.appendChild(h1);
-        } */
+        }   */
         data.forEach(elementos => {
             console.log(elementos);
             let col =  document.createElement('div')
@@ -55,6 +56,8 @@ fetch("https://memin.io/public/api/v2/users/search/"+valor.value, { method: "GET
             mostrar.setAttribute("onclick",`show(${elementos.id})`);
             card_body.appendChild(mostrar);
         });
+    }).catch(funciona => {
+        console.log(funciona);
     })
     
 
