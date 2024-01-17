@@ -73,58 +73,64 @@ function  eli(id){
 }
 
 function act(id){
-let cardBody = document.querySelector(`[onclick="act(${id})"]`).parentNode;
-
-    let formulario =  document.createElement('form'); 
-    let label= document.createElement('label');
-    label.innerText =  "Nombre";
-
-    let input_nombre  =  document.createElement('input');
-    input_nombre.setAttribute("type","text");
-    input_nombre.setAttribute("id","name_"+id);
-    input_nombre.setAttribute("placeholder","nuevo nombre");
-
-    let label2= document.createElement('label'); let usuario =   document.getElementById('usuario');
-    let correo =   document.getElementById('correo');
+    let cardBody = document.querySelector(`[onclick="act(${id})"]`).parentNode;
+        let formulario =  document.createElement('form'); 
+        let label= document.createElement('label');
+        label.innerText =  "Nombre";
     
-    let enviar  = document.createElement('button');
-    enviar.classList.add("btn","btn-success");
-    enviar.innerText =  "enviar datos";
-    enviar.setAttribute("type","button");
-
-    cardBody.appendChild(formulario);      
-    formulario.appendChild(label);
-    formulario.appendChild(input_nombre);
-    formulario.appendChild(label2);
-    formulario.appendChild(input_correo);
-    formulario.appendChild(enviar)
+        let input_nombre  =  document.createElement('input');
+        input_nombre.setAttribute("type","text");
+        input_nombre.setAttribute("id","name_"+id);
+        input_nombre.setAttribute("placeholder","nuevo nombre");
     
-    fetch("https://memin.io/public/api/users/"+id)
-    .then(result => result.json())
-    .then(data => {
-        document.getElementById('name_'+id).value = data.name;
-        document.getElementById('email_'+id).value = data.email;
-    });  
-    enviar.addEventListener('click', function (e) {
-        console.log(e)
-        let nombre = document.getElementById('name_'+id).value;
-        let correo = document.getElementById('email_'+id).value;
-
-        let nuevos_datos = {
-            name: nombre,
-            email: correo
-        };
-
-    fetch("https://memin.io/public/api/users/"+id, {  method: "PUT",
-    headers: {
-        "Content-Type": "application/json",
-    }, body:JSON.stringify(nuevos_datos)})
-
-    .then(response => { return response.json() })
-    .then(response => {  location.href = "" });
-});
-};
-
+        let label2= document.createElement('label');
+        label2.innerText =  "correo";
+    
+        let input_correo  =  document.createElement('input');
+        input_correo.setAttribute("type","email");
+        input_correo.setAttribute("id","email_"+id);
+        input_correo.setAttribute("placeholder","nuevo correo");
+    
+        let enviar  = document.createElement('button');
+        enviar.classList.add("btn","btn-success");
+        enviar.innerText =  "enviar datos";
+        enviar.setAttribute("type","button");
+    
+        
+        
+        cardBody.appendChild(formulario);      
+        formulario.appendChild(label);
+        formulario.appendChild(input_nombre);
+        formulario.appendChild(label2);
+        formulario.appendChild(input_correo);
+        formulario.appendChild(enviar)
+    
+        fetch("https://memin.io/public/api/users/"+id)
+        .then(result => result.json())
+        .then(data => {
+            document.getElementById('name_'+id).value = data.name;
+            document.getElementById('email_'+id).value = data.email;
+        });  
+        enviar.addEventListener('click', function (e) {
+            console.log(e)
+            let nombre = document.getElementById('name_'+id).value;
+            let correo = document.getElementById('email_'+id).value;
+    
+            let nuevos_datos = {
+                name: nombre,
+                email: correo
+            };
+    
+        fetch("https://memin.io/public/api/users/"+id, {  method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        }, body:JSON.stringify(nuevos_datos)})
+    
+        .then(response => { return response.json() })
+        .then(response => {  console.log(response.status); });
+    });
+    };
+    
 function show(id){
     fetch("https://memin.io/public/api/v2/users/"+id, { method: "GET"}).then(response => {
         return response.json()
