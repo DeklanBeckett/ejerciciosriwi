@@ -8,13 +8,8 @@ fetch("https://memin.io/public/api/v2/users/search/"+valor.value, { method: "GET
         return response.json()
         
     }).then(data =>{
-        console.log(data);
+        
         primero.innerHTML = ""
-        /*  if(data.lenght !== 0 || isNaN(data) || !data ){
-        let h1 =  document.createElement('h1');
-        h1.innerText = "no hay nada";
-        primero.appendChild(h1);
-        }   */
         data.forEach(elementos => {
             console.log(elementos);
             let col =  document.createElement('div')
@@ -29,9 +24,13 @@ fetch("https://memin.io/public/api/v2/users/search/"+valor.value, { method: "GET
             card_body.classList.add("card-body");
             card.appendChild(card_body);
         
-            let p = document.createElement('p');
+            let p = document.createElement('h3');
             card_body.appendChild(p);
             p.innerText = elementos.name;
+
+            let correo =  document.createElement('p');
+            correo.innerText = elementos.email;
+            card_body.appendChild(correo);
         
             let numero = document.createElement('p');
             numero.innerText = `id ${elementos.id}`;
@@ -127,7 +126,10 @@ function act(id){
         }, body:JSON.stringify(nuevos_datos)})
     
         .then(response => { return response.json() })
-        .then(response => {  console.log(response.status); });
+        .then(response => {  console.log(response.status); })
+        .then(actualizar =>{
+            location.href = ""
+        });
     });
     };
     
@@ -161,6 +163,10 @@ let guardar_user = {
         })
     })
 }
+
+
+
+
 
 
 
